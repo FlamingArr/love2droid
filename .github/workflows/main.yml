@@ -38,11 +38,12 @@ jobs:
         chmod +x apktool.jar
         sudo mv apktool /usr/local/bin/apktool
         sudo mv apktool.jar /usr/local/bin/apktool.jar
-        apktool
-        
-
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Download löve embed apk
+      run: wget https://github.com/love2d/love/releases/download/11.3/love-11.3-android-embed.apk
+    - name: Package stuff
+      run: apktool d -s -o love_decoded love-11.3-android-embed.apk
+    
+    - name: Tester
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        ls
+        pwd
