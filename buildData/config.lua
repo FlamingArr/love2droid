@@ -1,10 +1,14 @@
-gameName = "Butterfly game!" --The name of your game
-packageName = "com.a.valid.package.name" --A package name, see https://www.aftvnews.com/how-to-determine-the-package-name-of-an-android-app/
-versionCode = "1" --Version code of your game, a "int"
-versionSemn = "1.0' --Verions semtics 
+gameName = "Butterfly game!"
+packageName = "com.cooldevelopers.butterfly.yay" --See https://www.aftvnews.com/how-to-determine-the-package-name-of-an-android-app/
+versionCode = "1"
+versionSemn = "1.0"
 
---[
+--[[
+Here are what the variables mean. You just have to change their values:
+ packageName is your game internal package name.
+ versionCode is the internal APK version code.
+ versionSemantic is the readable APK version string. Example: 2.1.0
+ gameName is your game name which is going to be displayed in home screen/launcher.
 
---]
-
-o
+You can do a google search about any of these if feeling confused
+--]]
