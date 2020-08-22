@@ -2,13 +2,19 @@
 
 **You will just upload your game.love file and edit a config.lua file, wait a minute or two and download the generated signed or unsigned apk!**
 
-**Step by step guide :**
+## Step by step guide :
 * Fork this repository and perform the next steps in the forked repo
 * Replace the game.love file in buildData with your own (it must be named game.love)
 * Edit the config.lua file in buildData (the file itself contains info on how to edit it)
 * Goto actions tab and click on the topmost action
 * Wait until it finishes
 * Now from the artifacts download the signed or unsigned apk
+
+## Signed vs Unsigned
+* Unsigned : This apk is not signed, aka in debug mode, you can't install this without signing
+* Signed : It was created by signing the unsigned apk with uber
+
+**If you are planning on putting your app on play store then I would recommend getting the unsigned apk and then signing it yourself using your own key**
 
 **If anything breaks then please raise an issue**
 
