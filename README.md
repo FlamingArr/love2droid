@@ -13,3 +13,8 @@
 **If anything breaks then please raise an issue**
 
 **This uses the [apktool method](https://love2d.org/wiki/Game_Distribution/APKTool) of distributing love games to android and uses [uber apk signer](https://github.com/patrickfav/uber-apk-signer) to sign the apk**
+
+
+**Todo :**
+* Add icons support
+* Add microphone permission handling
