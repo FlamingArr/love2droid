@@ -1,6 +1,6 @@
 require("buildData.config")
 
-local raw, msg = io.open("rawManifest.xml", 'r')
+local raw, msg = io.open("raw.xml", 'r')
 
 assert(raw, msg)
 local data = raw:read('a')
@@ -23,7 +23,7 @@ print("_____MANIFEST AFTER GSUBS____")
 print(data)
 print("\n\n\n")
 
-local gen, msg = io.open("genManifest.xml", 'w+')
+local gen, msg = io.open("gen.xml", 'w+')
 assert(gen, msg)
 
 gen:write(data)
