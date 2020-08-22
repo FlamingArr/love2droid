@@ -41,7 +41,7 @@ jobs:
         apktool d -s -o love_decoded love-11.3-android-embed.apk
         cd love_decoded
         mkdir assets
-        rm AndroidaManifest.xml
+        rm AndroidManifest.xml
         cd ..
     - name: Generate manifest from config.lua
       run: |
