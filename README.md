@@ -1,11 +1,12 @@
 # Love2Droid, make .apk from .love "on" github
 
-**You will just upload your game.love file and edit a config.lua file, wait a minute or two and download the generated signed or unsigned apk!**
+**You will just upload your game.love file, do some configuration, wait a minute or two and download the generated signed or unsigned apk!**
 
 ## Step by step guide :
 * Fork this repository and perform the next steps in the forked repo.
 * Replace the game.love file in buildData with your own (it must be named game.love).
 * Edit the config.lua file in buildData (the file itself contains info on how to edit it).
+* In .github/worksflows create a new file named "build.yml" and copy paste the contents of main.yml
 * Goto actions tab and click on the topmost action.
 * Wait until it finishes.
 * Now from the artifacts download the signed or unsigned apk.
