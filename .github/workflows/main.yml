@@ -5,20 +5,14 @@ on:
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  
+  Android:
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    
     - uses: actions/checkout@v2
-      
-    - name: Creat the build directory
-      run: mkdir Builds
       
     - name: Update packages
       run: sudo apt-get update
@@ -39,7 +33,7 @@ jobs:
     - name: Download löve embed apk
       run: wget https://github.com/love2d/love/releases/download/11.3/love-11.3-android-embed.apk
       
-    - name: Package for android
+    - name: Package the game
       run: |
         apktool d -s -o love_decoded love-11.3-android-embed.apk
         cd love_decoded
@@ -50,8 +44,8 @@ jobs:
         cp buildData/AndroidManifest.xml love_decoded/AndroidManifest.xml
         cp buildData/game.love love_decoded/assets/game.love
         
-        apktool b -o Builds/build.apk love_decoded
+        apktool b -o build.apk love_decoded
     - uses: actions/upload-artifact@v2
       with:
-        name: Builds
-        path: Builds
+        name: Android build
+        path: build.apk
