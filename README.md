@@ -4,7 +4,7 @@
 
 **Step by step guide :**
 * Fork this repository and perform the next steps in the forked repo
-* Upload game.love file in buildData (it must be named game.love)
+* Replace the game.love file in buildData with your own (it must be named game.love)
 * Edit the config.lua file in buildData (the file itself contains info on how to edit it)
 * Goto actions tab and click on the topmost action
 * Wait until it finishes
