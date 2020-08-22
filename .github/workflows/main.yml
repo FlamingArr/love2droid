@@ -1,9 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Apk builder
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+name: Builder
 on:
   push:
     branches: [ master ]
@@ -21,8 +16,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
-    # Runs a single command using the runners shell
+    - name: Creat the build directory
+      run: mkdir builds
     - name: Update packages
       run: sudo apt-get update
     - name: Install java
@@ -40,7 +35,9 @@ jobs:
         sudo mv apktool.jar /usr/local/bin/apktool.jar
     - name: Download löve embed apk
       run: wget https://github.com/love2d/love/releases/download/11.3/love-11.3-android-embed.apk
-    - name: Package stuff
+    - name: Package all the files in
+      run: zip -r game.love .
+    - name: Package for android
       run: |
         apktool d -s -o love_decoded love-11.3-android-embed.apk
         cd love_decoded
@@ -48,10 +45,10 @@ jobs:
         rm AndroidManifest.xml
         cd ..
         
-        cp AndroidManifest.xml love_decoded/AndroidManifest.xml
+        cp buildData/AndroidManifest.xml love_decoded/AndroidManifest.xml
         cp game.love love_decoded/assets/game.love
         
-        apktool b -o your_game.apk love_decoded
+        apktool b -o builds/your_game.apk love_decoded
       
     - name: Tests
       run: |
