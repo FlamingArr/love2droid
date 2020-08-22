@@ -57,7 +57,7 @@ jobs:
     - name: Make a signed copy
       run: |
         cp unsigned.apk signed.apk
-        java -jar uber-apk-signer-1.1.0.jar signed.apk
+        java -jar uber-apk-signer-1.1.0.jar -a signed.apk
         
     - uses: actions/upload-artifact@v2
       with:
