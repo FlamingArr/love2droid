@@ -1,4 +1,4 @@
-# Love2Droid, make .apk from .love on github
+# Love2Droid, make .apk from .love "on" github
 
 **You will just upload your game.love file and edit a config.lua file, wait a minute or two and download the generated signed or unsigned apk!**
 
