@@ -46,7 +46,7 @@ jobs:
         cp buildData/game.love love_decoded/assets/game.love
         
     - name: Generate the unsigned apk
-      run: apktool b -o build_unsigned.apk love_decoded
+      run: apktool b -o unsigned.apk love_decoded
     
     - name: Make a signed copy
       run: |
@@ -56,9 +56,9 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: Android_unsigned.apk
-        path: build_unsigned.apk
+        path: unsigned.apk
     
     - uses: actions/upload-artifact@v2
       with:
         name: Android_signed.apk
-        path: build_signed.apk
+        path: signed.apk
