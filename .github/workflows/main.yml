@@ -1,9 +1,5 @@
 name: Builder
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+on: [push]
 
 jobs:
   
@@ -18,10 +14,12 @@ jobs:
       run: sudo apt-get update
     - name: Install java
       run: sudo apt-get install openjdk-8-jdk
+      
     - name: Download apktool
       run: |
         wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
         wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar
+      
     - name: Install apktool
       run: |
         mv apktool_2.4.1.jar apktool.jar
@@ -29,6 +27,9 @@ jobs:
         chmod +x apktool.jar
         sudo mv apktool /usr/local/bin/apktool
         sudo mv apktool.jar /usr/local/bin/apktool.jar
+        
+    - name: Download uber apk signer
+      run: wget https://github.com/patrickfav/uber-apk-signer/releases/download/v1.1.0/uber-apk-signer-1.1.0.jar
       
     - name: Download löve embed apk
       run: wget https://github.com/love2d/love/releases/download/11.3/love-11.3-android-embed.apk
@@ -44,8 +45,20 @@ jobs:
         cp buildData/AndroidManifest.xml love_decoded/AndroidManifest.xml
         cp buildData/game.love love_decoded/assets/game.love
         
-        apktool b -o build.apk love_decoded
+    - name: Generate the unsigned apk
+      run: apktool b -o build_unsigned.apk love_decoded
+    
+    - name: Make a signed copy
+      run: |
+        cp unsigned.apk signed.apk
+        java -jar uber-apk-signer.jar signed.apk
+        
     - uses: actions/upload-artifact@v2
       with:
-        name: Android build
-        path: build.apk
+        name: Android_unsigned.apk
+        path: build_unsigned.apk
+    
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Android_signed.apk
+        path: build_signed.apk
