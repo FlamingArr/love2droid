@@ -18,3 +18,4 @@
 **Todo :**
 * Add icons support
 * Add microphone permission handling
+* Add support for specifying a keystroke file
