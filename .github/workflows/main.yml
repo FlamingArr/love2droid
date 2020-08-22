@@ -34,17 +34,21 @@ jobs:
     - name: Download löve embed apk
       run: wget https://github.com/love2d/love/releases/download/11.3/love-11.3-android-embed.apk
       
-    - name: Package the game
+    - name: Decode the löve embed apk
       run: |
         apktool d -s -o love_decoded love-11.3-android-embed.apk
         cd love_decoded
         mkdir assets
-        rm AndroidManifest.xml
+        rm AndroidaMnifest.xml
         cd ..
-        
-        cp buildData/AndroidManifest.xml love_decoded/AndroidManifest.xml
-        cp buildData/game.love love_decoded/assets/game.love
-        
+    - name: Generate manifest from config.lua
+      run: |
+        luajit manifest_generator.lua
+        mv gen.xml love_decoded/AndroidManifest.xml
+    
+    - name: Insert game.love
+      run: mv buildData/game.love love_decoded/assets/game.love
+      
     - name: Generate the unsigned apk
       run: apktool b -o unsigned.apk love_decoded
     
