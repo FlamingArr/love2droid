@@ -17,7 +17,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Creat the build directory
-      run: mkdir builds
+      run: mkdir Builds
     - name: Update packages
       run: sudo apt-get update
     - name: Install java
@@ -48,9 +48,8 @@ jobs:
         cp buildData/AndroidManifest.xml love_decoded/AndroidManifest.xml
         cp game.love love_decoded/assets/game.love
         
-        apktool b -o builds/your_game.apk love_decoded
-      
-    - name: Tests
-      run: |
-        ls
-        pwd
+        apktool b -o Builds/your_game.apk love_decoded
+    - uses: actions/upload-artifact@v2
+      with:
+        name: Builds
+        path: Builds
