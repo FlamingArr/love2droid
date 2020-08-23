@@ -2,6 +2,7 @@ gameName = "Butterfly game!"
 packageName = "com.cooldevelopers.butterfly.yay" --See https://www.aftvnews.com/how-to-determine-the-package-name-of-an-android-app/
 versionCode = "1"
 versionSemantic = "1.0"
+usesMicrophone = false
 
 --[[
 Here are what the variables mean. You just have to change their values:
