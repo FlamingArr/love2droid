@@ -1,7 +1,7 @@
 require("buildData.config")
 
 local rawXmlLocation = usesMicrophone and "rawMic.xml" or "raw.xml"
-local raw, msg = io.open(rawXmlTarget, 'r')
+local raw, msg = io.open(rawXmlLocation, 'r')
 
 assert(raw, msg)
 local data = raw:read('a')
