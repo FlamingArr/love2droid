@@ -55,7 +55,9 @@ jobs:
       run: apktool b -o unsigned.apk love_decoded
     
     - name: Make a signed copy
-      run: java -jar uber-apk-signer-1.1.0.jar -a unsigned.apk -o signed.apk
+      run: |
+           java -jar uber-apk-signer-1.1.0.jar -a unsigned.apk
+           mv unsigned-aligned-debugSigned.apk signed.apk
         
     - uses: actions/upload-artifact@v2
       with:
