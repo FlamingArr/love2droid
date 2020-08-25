@@ -9,10 +9,13 @@ local data = raw:read('a')
 raw:close()
 
 print("____DATA FROM CONFIG____")
+
 print(packageName)
 print(versionCode)
 print(versionSemantic)
 print(gameName)
+print("Micronphone? "..tostring(usesMicrophone))
+
 print("\n\n\n")
 
 data = data:gsub("${GamePackageName}", packageName)
