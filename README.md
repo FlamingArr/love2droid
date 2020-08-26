@@ -23,4 +23,3 @@
 
 **Todo :**
 * Add icons support
-* Add microphone permission handling

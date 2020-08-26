@@ -1,6 +1,7 @@
 require("buildData.config")
 
-local raw, msg = io.open("raw.xml", 'r')
+local rawXmlLocation = usesMicrophone and "rawMic.xml" or "raw.xml"
+local raw, msg = io.open(rawXmlLocation, 'r')
 
 assert(raw, msg)
 local data = raw:read('a')
@@ -8,10 +9,13 @@ local data = raw:read('a')
 raw:close()
 
 print("____DATA FROM CONFIG____")
+
 print(packageName)
 print(versionCode)
 print(versionSemantic)
 print(gameName)
+print("Micronphone? "..tostring(usesMicrophone))
+
 print("\n\n\n")
 
 data = data:gsub("${GamePackageName}", packageName)
