@@ -7,6 +7,7 @@
 **All the steps below should be done in your generated repo**
 * Goto actions and enable actions if they are not enabled
 * Replace the game.love file in buildData with your own (it must be named game.love).
+* [OPTIONAL] Replace the love.png files in the folders in buildData/res with your app icons, they must be named 'love.png' and have the same size.
 * Edit the config.lua file in buildData (the file itself contains info on how to edit it).
 * Goto actions tab and click on the topmost action.
 * Wait until it finishes.
@@ -19,7 +20,3 @@
 **If anything breaks then please raise an issue**
 
 **This uses the [apktool method](https://love2d.org/wiki/Game_Distribution/APKTool) of distributing love games to android and uses [uber apk signer](https://github.com/patrickfav/uber-apk-signer) to sign the apk**
-
-
-**Todo :**
-* Add icons support
