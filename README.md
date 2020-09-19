@@ -17,6 +17,6 @@
 * Unsigned : This apk is not signed, aka in debug mode, you can't install this without signing.
 * Signed : It was created by signing the unsigned apk with uber.
 
-**If anything breaks then please raise an issue**
+**If anything breaks or you have an suggestion then please raise an issue**
 
 **This uses the [apktool method](https://love2d.org/wiki/Game_Distribution/APKTool) of distributing love games to android and uses [uber apk signer](https://github.com/patrickfav/uber-apk-signer) to sign the apk**
