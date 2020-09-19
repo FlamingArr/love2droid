@@ -40,6 +40,7 @@ jobs:
         mkdir assets
         rm AndroidManifest.xml
         cd ..
+      
     - name: Generate manifest from config.lua
       run: |
         luajit manifest_generator.lua
@@ -47,7 +48,9 @@ jobs:
     
     - name: Insert game.love
       run: mv buildData/game.love love_decoded/assets/game.love
-      
+    - name: Replace app icons
+      run: cp -rf buildData/res love_decoded
+    
     - name: Generate the unsigned apk
       run: apktool b -o unsigned.apk love_decoded
     
