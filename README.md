@@ -3,7 +3,7 @@
 **After some setup, you will just upload your game.love file, do some configuration, wait a minute or two and download the generated signed or unsigned apk!**
 
 ## Step by step guide :
-* Generate a repository from this repo with "Use this template" (See [Creating repos from a template repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) <br/>
+* Generate a repository from this repo with "Use this template", you can name it whatever you want (See [Creating repos from a template repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) <br/>
 **All the steps below should be done in your generated repo**
 * Goto actions and enable actions if they are not enabled
 * Replace the game.love file in buildData with your own (it must be named game.love).
