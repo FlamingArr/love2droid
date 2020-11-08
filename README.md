@@ -1,6 +1,6 @@
 # Love2Droid, make .apk from .love "on" github
 
-**After some setup, you will just upload your game.love file, do some configuration, wait a minute or two and download the generated signed or unsigned apk!**
+**After some initial setup, you can just upload your game.love file, do some configuration, wait a minute or two and download the generated signed or unsigned apk.**
 
 ## Step by step guide :
 * Generate a repository from this repo with "Use this template", you can name it whatever you want (See [Creating repos from a template repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) <br/>
