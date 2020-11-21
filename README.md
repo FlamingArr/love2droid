@@ -1,16 +1,17 @@
 # Love2Droid, make .apk from .love "on" github
 
-**After some initial setup, you can just upload your game.love file, do some configuration, wait a minute or two and download the generated signed or unsigned apk.**
+**After initial setup, you can just upload your game.love file, do some optional  configuration, wait a minute or two and download the generated signed or unsigned apk.**
 
 ## Step by step guide :
 * Generate a repository from this repo with "Use this template", you can name it whatever you want (See [Creating repos from a template repo](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)) <br/>
 **All the steps below should be done in your generated repo**
-* Goto actions and enable actions if they are not enabled
+* Goto actions and enable actions if they are not enabled.
 * Replace the game.love file in buildData with your own (it must be named game.love).
 * [OPTIONAL] Replace the love.png files in the folders in buildData/res with your app icons, they must be named 'love.png' and have the same size.
 * Edit the config.lua file in buildData (the file itself contains info on how to edit it).
-* Goto actions tab and click on the topmost action.
+* [OPTIONAL BUT RECOMMENDED] Goto actions tab and click on the topmost action.
 * Wait until it finishes.
+* Select **Android** from the top left corner.
 * Now from the artifacts download the signed or unsigned apk.
 
 ## Signed vs Unsigned
