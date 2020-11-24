@@ -1,3 +1,8 @@
+# Warning
+**Love2droid is subject to a refactor or a deletion, as the Apktool method of distributing löve games to android is going to be deprecated in 2021**
+
+**See the notice at the top of [this](https://love2d.org/wiki/Game_Distribution/APKTool) page for details**
+
 # Love2Droid, make .apk from .love "on" github
 
 **After initial setup, you can just upload your game.love file, do some optional  configuration, wait a minute or two and download the generated signed or unsigned apk.**
