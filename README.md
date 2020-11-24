@@ -1,5 +1,5 @@
 # Warning
-**Love2droid is subject to a refactor or a deletion, as the Apktool method of distributing löve games to android is going to be deprecated in 2021**
+**Love2droid is subject to a refactor or a deletion, as the Apktool method of distributing löve games on android is going to be deprecated in 2021**
 
 **See the notice at the top of [this](https://love2d.org/wiki/Game_Distribution/APKTool) page for details**
 
