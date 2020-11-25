@@ -32,3 +32,7 @@ jobs:
     - name: Tests
       run: |
         ls
+        cd android-ndk-r21d
+        ls
+        cd commandlinetools
+        ls
