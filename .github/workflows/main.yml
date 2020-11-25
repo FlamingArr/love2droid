@@ -18,4 +18,8 @@ jobs:
       run: git clone --recurse-submodules https://github.com/love2d/love-android
     
     - name: Get NDK
-      u
+      run: wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
+    
+    - name: Tests
+      run: |
+        ls
