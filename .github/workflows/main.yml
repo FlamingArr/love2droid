@@ -16,7 +16,9 @@ jobs:
       run: sudo apt-get install openjdk-8-jdk
     - name: Install luajit
       run: sudo apt-get install luajit
-      
+    - name: Clone love2d-android
+      run: git clone --recurse-submodules https://github.com/love2d/love-android
+    
     - name: Download apktool
       run: |
         wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool
