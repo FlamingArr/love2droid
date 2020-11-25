@@ -27,7 +27,7 @@ jobs:
       run: wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
     
     
-    - name: Unpack 
+  #  - name: Unpack 
     
     - name: Tests
       run: |
