@@ -17,8 +17,14 @@ jobs:
     - name: Clone love2d-android
       run: git clone --recurse-submodules https://github.com/love2d/love-android
     
+    # Keep these updated
     - name: Get NDK
       run: wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
+    - name: Get SDK
+      run: wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
+    
+    
+    - n
     
     - name: Tests
       run: |
