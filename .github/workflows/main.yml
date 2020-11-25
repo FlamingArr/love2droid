@@ -23,7 +23,7 @@ jobs:
         wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
         unzip -o android-ndk-r21d-linux-x86_64.zip
       
-    - name: Get and  SDK
+    - name: Get and unpack SDK
       run: |
         wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
         unzip commandlinetools-linux-6858069_latest.zip
@@ -34,9 +34,9 @@ jobs:
     - name: Tests
       run: |
         ls
-        echo "INSIDE android-ndk-r21d"
+        echo "[[[ INSIDE android-ndk-r21d ]]]"
         cd android-ndk-r21d
         ls
-        echo "INSIDE cmdlinetools"
-        cd cmdlinetools
+        echo "[[[ INSIDE cmdline-tools ]]]"
+        cd cmdline-tools
         ls
