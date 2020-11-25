@@ -21,7 +21,7 @@ jobs:
     - name: Get and unpack NDK
       run: |
         wget https://dl.google.com/android/repository/android-ndk-r21d-linux-x86_64.zip
-        un
+        unzip -o 
     - name: Get SDK
       run: wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
     
