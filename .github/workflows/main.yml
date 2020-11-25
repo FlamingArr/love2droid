@@ -37,6 +37,7 @@ jobs:
         echo "[[[ INSIDE android-ndk-r21d ]]]"
         cd android-ndk-r21d
         ls
+        cd ..
         echo "[[[ INSIDE cmdline-tools ]]]"
         cd cmdline-tools
         ls
