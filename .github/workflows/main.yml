@@ -14,8 +14,8 @@ jobs:
       #run: sudo apt-get update
    # - name: Install luajit
      # run: sudo apt-get install luajit
-    - name: Clone love2d-android
-      run: git clone --recurse-submodules https://github.com/love2d/love-android
+   # - name: Clone love2d-android
+    #  run: git clone --recurse-submodules https://github.com/love2d/love-android
     
     # Keep these updated
     - name: Get and unpack NDK
