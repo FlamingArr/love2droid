@@ -10,10 +10,10 @@ jobs:
     
     - uses: actions/checkout@v2
       
-    - name: Update packages
-      run: sudo apt-get update
-    - name: Install luajit
-      run: sudo apt-get install luajit
+   # - name: Update packages
+      #run: sudo apt-get update
+   # - name: Install luajit
+     # run: sudo apt-get install luajit
     - name: Clone love2d-android
       run: git clone --recurse-submodules https://github.com/love2d/love-android
     
