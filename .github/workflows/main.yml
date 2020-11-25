@@ -28,7 +28,9 @@ jobs:
         wget https://dl.google.com/android/repository/commandlinetools-linux-6858069_latest.zip
         unzip commandlinetools-linux-6858069_latest.zip
     
-    
+    - name: Export ANDROID_HOME and ANDROID_NDK_HOME
+      run: |
+      
   #  - name: Unpack 
     
     - name: Tests
@@ -41,3 +43,5 @@ jobs:
         echo "[[[ INSIDE cmdline-tools ]]]"
         cd cmdline-tools
         ls
+        echo "MMMMMMMM"
+        echo $GITHUB_WORKSPACE
